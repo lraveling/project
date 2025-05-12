@@ -50,6 +50,10 @@ inflation %>%
   ungroup() %>% 
   ggplot() +
   geom_line(aes(date, value, color = name)) +
+  theme_minimal() +
+  ylab("subjective inflation in %-points") +
+  labs(color = "") +
+  theme(legend.position = c(.1, .9)) +
   NULL
 ```
 
@@ -67,7 +71,16 @@ usethis::use_git_config(
 usethis::use_git()
 ```
 
+```{r}
+usethis::create_github_token(description = "Token for Repro Workshop 2025")
+```
+```{r}
+gitcreds::gitcreds_set() # <-- Token must *not* go into brackets, paste when asked
+```
 
+```{r}
+usethis::use_github()
+```
 
 
 
