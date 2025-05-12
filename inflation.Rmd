@@ -81,7 +81,16 @@ gitcreds::gitcreds_set() # <-- Token must *not* go into brackets, paste when ask
 ```{r}
 usethis::use_github()
 ```
+```{r}
+usethis::use_mit_license()
+```
 
+```{r}
+usethis::use_readme_rmd()
+```
+```{r}
+repro::automate()
+```
 
 
 
